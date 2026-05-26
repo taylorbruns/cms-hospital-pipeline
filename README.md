@@ -18,7 +18,7 @@ Location of data: https://data.cms.gov/provider-data/api/1/metastore/schemas/dat
 Verify python downloaded:
 python --version
 
-Got to file location:
+Got to file location: (Example - could also set up in VS Code)
 cd "C:\Users\TaylorBruns\Documents\Personal\cms-hospital-pipeline"
 
 pip install -r requirements.txt
