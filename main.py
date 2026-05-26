@@ -31,7 +31,20 @@ def fetch_datasets():
 
 ## Hospitals theme data only
 def filter_hospitals(datasets):
-    return [d for d in datasets if d.get("theme", "").lower() == "hospitals"]
+    result = []
+
+    for d in datasets:
+        theme = d.get("theme", [])
+
+        # Handle both string and list cases
+        if isinstance(theme, list):
+            if any(t.lower() == "hospitals" for t in theme):
+                result.append(d)
+        elif isinstance(theme, str):
+            if theme.lower() == "hospitals":
+                result.append(d)
+
+    return result
 
 def needs_update(dataset, state):
     dataset_id = dataset["identifier"]
