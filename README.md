@@ -14,10 +14,19 @@ Location of data: https://data.cms.gov/provider-data/api/1/metastore/schemas/dat
 
 ---
 
-## Setup
+## Setup and How to run
+Verify python downloaded:
+python --version
 
-```bash
+Got to file location:
+cd "C:\Users\TaylorBruns\Documents\Personal\cms-hospital-pipeline"
+
 pip install -r requirements.txt
+
+Run python file: 
+python main.py
+
+Output files should be in the folder location under an "output" folder
 
 
 ## Overview of how it is run
